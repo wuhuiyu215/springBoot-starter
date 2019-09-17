@@ -16,6 +16,7 @@ public class FreemarkerController {
 	
 	@RequestMapping("/index")
     public String index(ModelMap map) {
+		//map.
         map.addAttribute("resource", resource);
         return "freemarker/index";
     }

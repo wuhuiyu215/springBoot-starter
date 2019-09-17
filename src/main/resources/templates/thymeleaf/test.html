@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <title></title>
     
-<!-- 	<script th:src="@{/static/js/test.js}"></script> -->
+	<!-- <script th:src="@{/static/js/test.js}"></script> -->
     
 </head>
 <body>
@@ -70,14 +70,14 @@ URL:<br/>
 <br/>
 
 <br/>
-<table>
-    <tr>
+<table style="border:1px solid red">
+    <tr style="border:1px solid red">
         <th>姓名</th>
         <th>年龄</th>
         <th>年龄备注</th>
         <th>生日</th>
     </tr>
-    <tr th:each="person:${userList}">
+    <tr th:each="person:${userList}" style="border:1px solid red">
         <td th:text="${person.name}"></td>
         <td th:text="${person.age}"></td>
         <td th:text="${person.age gt 18} ? 你老了 : 你很年轻">18岁</td>
@@ -87,7 +87,7 @@ URL:<br/>
 <br/>
 
 <br/>
-<div th:switch="${user.name}">
+<div th:switch="${user.name}" >
   <p th:case="'lee'">lee</p>
   <p th:case="#{roles.manager}">普通管理员</p>
   <p th:case="#{roles.superadmin}">超级管理员</p>
